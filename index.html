@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Temp Mail Pro</title>
+  <meta name="description" content="Free temporary email service. Receive emails instantly without signup.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+  <h1>⚡ Temp Mail Pro</h1>
+
+  <div class="email-box">
+    <span id="email">Loading...</span>
+    <button onclick="newMail()">➕ New</button>
+  </div>
+
+  <input id="search" placeholder="🔍 Search mail..." oninput="renderInbox()">
+
+  <h2>📥 Inbox</h2>
+  <div id="inbox"></div>
+
+  <div id="mailView" class="hidden">
+    <button onclick="closeMail()">⬅ Back</button>
+    <div id="attachments"></div>
+    <pre id="mailContent"></pre>
+  </div>
+
+  <footer>
+    <a href="privacy.html">Privacy Policy</a> |
+    <a href="terms.html">Terms</a> |
+    <a href="contact.html">Contact</a>
+  </footer>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

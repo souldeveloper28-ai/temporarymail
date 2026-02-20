@@ -1,0 +1,71 @@
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: #0f172a;
+  color: white;
+}
+
+.app {
+  max-width: 520px;
+  margin: auto;
+  padding: 15px;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+.email-box {
+  background: #1e293b;
+  padding: 12px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+button {
+  background: #22c55e;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#search {
+  width: 100%;
+  margin: 12px 0;
+  padding: 8px;
+  border-radius: 6px;
+  border: none;
+}
+
+.mail {
+  background: #1e293b;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+.mail:hover {
+  background: #334155;
+}
+
+.hidden {
+  display: none;
+}
+
+pre {
+  white-space: pre-wrap;
+}
+
+footer {
+  margin-top: 20px;
+  text-align: center;
+}
+
+footer a {
+  color: #38bdf8;
+  text-decoration: none;
+}
