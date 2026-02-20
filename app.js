@@ -1,16 +1,16 @@
-const API = "https://api.mail.tm";
-let token = "";
-let inbox = [];
-let seen = new Set();
+console.log("TemporaryMail v3 loaded");
+
+const API="https://api.mail.tm";
+let token="", inbox=[], seen=new Set();
 
 async function newMail(){
   inbox=[]; seen.clear(); renderInbox();
 
-  const d = await fetch(API+"/domains").then(r=>r.json());
-  const domain = d["hydra:member"][0].domain;
+  const d=await fetch(API+"/domains").then(r=>r.json());
+  const domain=d["hydra:member"][0].domain;
 
-  const email = Math.random().toString(36).slice(2,10)+"@"+domain;
-  const password = Math.random().toString(36);
+  const email=Math.random().toString(36).slice(2,10)+"@"+domain;
+  const password=Math.random().toString(36);
 
   await fetch(API+"/accounts",{
     method:"POST",
@@ -18,20 +18,20 @@ async function newMail(){
     body:JSON.stringify({address:email,password})
   });
 
-  const t = await fetch(API+"/token",{
+  const t=await fetch(API+"/token",{
     method:"POST",
     headers:{"Content-Type":"application/json"},
     body:JSON.stringify({address:email,password})
   }).then(r=>r.json());
 
-  token = t.token;
-  document.getElementById("email").innerText = email;
+  token=t.token;
+  document.getElementById("email").innerText=email;
 }
 
 async function refreshInbox(){
   if(!token) return;
 
-  const r = await fetch(API+"/messages",{
+  const r=await fetch(API+"/messages",{
     headers:{Authorization:"Bearer "+token}
   }).then(r=>r.json());
 
@@ -45,24 +45,24 @@ async function refreshInbox(){
 }
 
 function renderInbox(){
-  const box = document.getElementById("inbox");
-  box.innerHTML = "";
+  const box=document.getElementById("inbox");
+  box.innerHTML="";
 
   if(inbox.length===0){
-    box.innerHTML = `<div class="empty">Your inbox is empty</div>`;
+    box.innerHTML=`<div class="empty">Your inbox is empty</div>`;
     return;
   }
 
   inbox.forEach(m=>{
-    const d = document.createElement("div");
+    const d=document.createElement("div");
     d.className="mail";
-    d.innerText="📩 "+(m.subject||"No subject");
+    d.textContent="📩 "+(m.subject||"No subject");
     d.onclick=()=>openMail(m);
     box.appendChild(d);
   });
 }
 
-/* ✅ READ MAIL — NO API CALL */
+/* ✅ READ MAIL — NO SECOND API CALL */
 function openMail(mail){
   document.getElementById("modal-subject").innerText =
     mail.subject || "No subject";
