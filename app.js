@@ -54,8 +54,8 @@ function renderInbox(){
   inbox.forEach(m=>{
     const d=document.createElement("div");
     d.className="mail";
-    d.innerText="📩 "+(m.subject||"No subject");
-    d.onclick=()=>openMail(m.id);
+    d.textContent="📩 "+(m.subject||"No subject");
+    d.addEventListener("click",()=>openMail(m.id));
     box.appendChild(d);
   });
 }
@@ -67,13 +67,13 @@ async function openMail(id){
 
   document.getElementById("modal-subject").innerText=r.subject||"No subject";
   document.getElementById("modal-body").innerText=
-    r.text || r.html?.replace(/<[^>]*>/g,"") || "Empty mail";
+    r.text || (r.html ? r.html.replace(/<[^>]*>/g,"") : "Empty mail");
 
-  document.getElementById("modal").style.display="flex";
+  document.getElementById("modal").classList.remove("hidden");
 }
 
 function closeMail(){
-  document.getElementById("modal").style.display="none";
+  document.getElementById("modal").classList.add("hidden");
 }
 
 function copyMail(){
