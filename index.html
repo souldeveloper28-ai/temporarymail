@@ -8,49 +8,53 @@
 </head>
 <body>
 
-<!-- HEADER -->
 <header class="header">
   <div class="logo">📧 TemporaryMail</div>
   <button class="premium-btn">Premium</button>
 </header>
 
-<!-- MAIN -->
 <main class="container">
 
-  <!-- EMAIL SECTION -->
   <section class="card email-section">
     <h1>Your Temporary Email</h1>
 
     <div class="email-row">
       <span id="email">Loading...</span>
-      <button onclick="copyMail()">Copy</button>
+      <button class="btn" onclick="copyMail()">Copy</button>
     </div>
 
     <div class="email-actions">
-      <button onclick="newMail()">Change</button>
-      <button onclick="refreshInbox()">Refresh</button>
-      <button class="danger" onclick="clearInbox()">Delete</button>
+      <button class="btn" onclick="newMail()">Change</button>
+      <button class="btn" onclick="refreshInbox()">Refresh</button>
+      <button class="btn danger" onclick="clearInbox()">Delete</button>
     </div>
   </section>
 
-  <!-- AD SAFE ZONE -->
   <div class="ad-zone">Advertisement</div>
 
-  <!-- INBOX -->
   <section class="card inbox-section">
     <h2>Inbox</h2>
     <div id="inbox"></div>
   </section>
 
-  <!-- AD SAFE ZONE -->
   <div class="ad-zone">Advertisement</div>
 
-  <!-- FOOTER -->
   <footer>
-    Built by <b>Yash</b> • Secure Temporary Email
+    Built by <b>Yash</b>
   </footer>
 
 </main>
+
+<!-- MAIL MODAL -->
+<div id="modal" class="modal">
+  <div class="modal-box">
+    <div class="modal-header">
+      <span id="modal-subject">Mail</span>
+      <button onclick="closeMail()">✖</button>
+    </div>
+    <div id="modal-body" class="modal-body"></div>
+  </div>
+</div>
 
 <script src="app.js"></script>
 </body>
