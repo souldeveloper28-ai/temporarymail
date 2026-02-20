@@ -72,12 +72,7 @@ body{
   cursor:pointer;
   transition:transform .1s,background .2s;
 }
-
-.btn:active{
-  transform:scale(.95);
-  background:#334155;
-}
-
+.btn:active{transform:scale(.95);background:#334155}
 .btn.danger{background:#dc2626}
 
 /* ADS */
@@ -101,11 +96,7 @@ body{
   cursor:pointer;
   animation:pop .25s ease-out;
 }
-
-@keyframes pop{
-  from{opacity:0;transform:scale(.95)}
-  to{opacity:1;transform:scale(1)}
-}
+@keyframes pop{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}
 
 .empty{
   text-align:center;
@@ -121,16 +112,17 @@ footer{
   margin-top:30px;
 }
 
-/* MODAL */
+/* ✅ MODAL (FIXED) */
 .modal{
   position:fixed;
   inset:0;
   background:rgba(0,0,0,.6);
-  display:none;
+  display:flex;
   justify-content:center;
   align-items:center;
   z-index:999;
 }
+.hidden{display:none}
 
 .modal-box{
   background:#020617;
@@ -160,4 +152,4 @@ footer{
   padding:16px;
   white-space:pre-wrap;
   font-size:14px;
-  }
+}
