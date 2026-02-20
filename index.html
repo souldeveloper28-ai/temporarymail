@@ -4,73 +4,50 @@
   <meta charset="UTF-8">
   <title>TemporaryMail</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- AdSense MAIN SCRIPT (approval ke baad hi enable hoga) -->
-  <!--
-  <script async
-    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
-  </script>
-  -->
-
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-  <div class="brand">📧 TemporaryMail</div>
-  <button class="premium">Go Premium</button>
+<!-- HEADER -->
+<header class="header">
+  <div class="logo">📧 TemporaryMail</div>
+  <button class="premium-btn">Premium</button>
 </header>
 
-<main class="wrap">
+<!-- MAIN -->
+<main class="container">
 
-  <h1>Your Temporary Email Address</h1>
+  <!-- EMAIL SECTION -->
+  <section class="card email-section">
+    <h1>Your Temporary Email</h1>
 
-  <div class="email-card">
-    <span id="email">Loading…</span>
-    <button onclick="copyMail()">Copy</button>
-  </div>
+    <div class="email-row">
+      <span id="email">Loading...</span>
+      <button onclick="copyMail()">Copy</button>
+    </div>
 
-  <div class="actions">
-    <button onclick="newMail()">Change</button>
-    <button onclick="refreshInbox()">Refresh</button>
-    <button class="danger" onclick="clearInbox()">Delete</button>
-  </div>
+    <div class="email-actions">
+      <button onclick="newMail()">Change</button>
+      <button onclick="refreshInbox()">Refresh</button>
+      <button class="danger" onclick="clearInbox()">Delete</button>
+    </div>
+  </section>
 
-  <!-- 🔥 TOP AD SLOT -->
-  <div class="ad-slot">
-    <!--
-    <ins class="adsbygoogle"
-      style="display:block"
-      data-ad-client="ca-pub-XXXXXXXX"
-      data-ad-slot="YYYYYYYY"
-      data-ad-format="auto"
-      data-full-width-responsive="true"></ins>
-    <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
-    -->
-    Advertisement
-  </div>
+  <!-- AD SAFE ZONE -->
+  <div class="ad-zone">Advertisement</div>
 
-  <section class="inbox">
+  <!-- INBOX -->
+  <section class="card inbox-section">
     <h2>Inbox</h2>
     <div id="inbox"></div>
   </section>
 
-  <!-- 🔥 BOTTOM AD SLOT -->
-  <div class="ad-slot">
-    <!--
-    <ins class="adsbygoogle"
-      style="display:block"
-      data-ad-client="ca-pub-XXXXXXXX"
-      data-ad-slot="ZZZZZZZZ"
-      data-ad-format="auto"
-      data-full-width-responsive="true"></ins>
-    <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
-    -->
-    Advertisement
-  </div>
+  <!-- AD SAFE ZONE -->
+  <div class="ad-zone">Advertisement</div>
 
+  <!-- FOOTER -->
   <footer>
-    © Built by <b>Yash</b>
+    Built by <b>Yash</b> • Secure Temporary Email
   </footer>
 
 </main>
