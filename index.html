@@ -2,52 +2,78 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>TemporaryMail • Premium</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TemporaryMail</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- AdSense MAIN SCRIPT (approval ke baad hi enable hoga) -->
+  <!--
+  <script async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+  </script>
+  -->
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header class="top">
-  <div class="logo">📧 TemporaryMail</div>
+<header>
+  <div class="brand">📧 TemporaryMail</div>
   <button class="premium">Go Premium</button>
 </header>
 
-<main class="container">
+<main class="wrap">
 
-  <h1>Your Temporary Email</h1>
+  <h1>Your Temporary Email Address</h1>
 
-  <!-- EMAIL CARD -->
-  <div class="card email-card">
-    <span id="email">loading...</span>
+  <div class="email-card">
+    <span id="email">Loading…</span>
     <button onclick="copyMail()">Copy</button>
   </div>
 
-  <!-- ACTIONS -->
   <div class="actions">
     <button onclick="newMail()">Change</button>
     <button onclick="refreshInbox()">Refresh</button>
     <button class="danger" onclick="clearInbox()">Delete</button>
   </div>
 
-  <!-- AD PLACE (ADSENSE SAFE) -->
-  <div class="ad-box">Advertisement</div>
+  <!-- 🔥 TOP AD SLOT -->
+  <div class="ad-slot">
+    <!--
+    <ins class="adsbygoogle"
+      style="display:block"
+      data-ad-client="ca-pub-XXXXXXXX"
+      data-ad-slot="YYYYYYYY"
+      data-ad-format="auto"
+      data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+    -->
+    Advertisement
+  </div>
 
-  <!-- INBOX -->
-  <section class="card inbox-card">
+  <section class="inbox">
     <h2>Inbox</h2>
     <div id="inbox"></div>
   </section>
 
-</main>
-
-<!-- MAIL MODAL -->
-<div id="modal" class="modal hidden">
-  <div class="modal-content">
-    <button class="close" onclick="closeMail()">✕</button>
-    <pre id="mailContent"></pre>
+  <!-- 🔥 BOTTOM AD SLOT -->
+  <div class="ad-slot">
+    <!--
+    <ins class="adsbygoogle"
+      style="display:block"
+      data-ad-client="ca-pub-XXXXXXXX"
+      data-ad-slot="ZZZZZZZZ"
+      data-ad-format="auto"
+      data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+    -->
+    Advertisement
   </div>
-</div>
+
+  <footer>
+    © Built by <b>Yash</b>
+  </footer>
+
+</main>
 
 <script src="app.js"></script>
 </body>
