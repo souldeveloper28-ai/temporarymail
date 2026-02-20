@@ -1,55 +1,69 @@
-* { box-sizing: border-box }
+* { box-sizing: border-box; }
 
 body {
   margin: 0;
-  font-family: system-ui, sans-serif;
-  background: #0b1220;
-  color: #fff;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont;
+  background: linear-gradient(160deg, #020617, #0f172a);
+  color: #e5e7eb;
 }
 
-header {
+/* HEADER */
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 14px 18px;
-  background: #0f172a;
+  background: rgba(15,23,42,0.85);
+  backdrop-filter: blur(8px);
 }
 
-.brand {
+.logo {
   font-size: 20px;
   font-weight: 700;
 }
 
-.premium {
-  background: #22c55e;
+.premium-btn {
+  background: linear-gradient(90deg,#22c55e,#16a34a);
   border: none;
-  padding: 8px 14px;
-  border-radius: 20px;
+  padding: 8px 16px;
+  border-radius: 999px;
   font-weight: 600;
+  color: #020617;
 }
 
-.wrap {
-  max-width: 480px;
+/* MAIN */
+.container {
+  max-width: 520px;
   margin: auto;
   padding: 20px;
+}
+
+/* CARD */
+.card {
+  background: rgba(255,255,255,0.04);
+  border-radius: 18px;
+  padding: 18px;
+  margin-bottom: 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+/* EMAIL SECTION */
+.email-section h1 {
+  margin-top: 0;
   text-align: center;
 }
 
-h1 {
-  font-size: 22px;
-  margin: 24px 0;
-}
-
-.email-card {
+.email-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #111827;
+  background: #020617;
   padding: 14px;
   border-radius: 14px;
+  font-size: 15px;
 }
 
-.email-card button {
+.email-row button {
   background: #22c55e;
   border: none;
   padding: 8px 14px;
@@ -57,57 +71,60 @@ h1 {
   font-weight: 600;
 }
 
-.actions {
+.email-actions {
   display: flex;
   gap: 10px;
-  margin: 16px 0;
+  margin-top: 14px;
 }
 
-.actions button {
+.email-actions button {
   flex: 1;
   padding: 10px;
   border-radius: 12px;
   border: none;
   background: #1e293b;
-  color: #fff;
+  color: white;
 }
 
-.actions .danger {
+.email-actions .danger {
   background: #dc2626;
 }
 
-.ad-slot {
-  margin: 18px 0;
-  padding: 18px;
-  border-radius: 12px;
+/* AD ZONE */
+.ad-zone {
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 14px;
   background: #020617;
   color: #64748b;
+  text-align: center;
   font-size: 14px;
 }
 
-.inbox {
-  text-align: left;
-}
-
-.inbox h2 {
+/* INBOX */
+.inbox-section h2 {
+  margin-top: 0;
   text-align: center;
 }
 
 .mail {
-  background: #111827;
-  padding: 12px;
-  border-radius: 12px;
+  background: #020617;
+  padding: 14px;
+  border-radius: 14px;
   margin-bottom: 10px;
+  cursor: pointer;
 }
 
 .empty {
   text-align: center;
-  color: #9ca3af;
+  color: #94a3b8;
   padding: 30px;
 }
 
+/* FOOTER */
 footer {
-  margin-top: 24px;
+  text-align: center;
   font-size: 13px;
   color: #94a3b8;
-}
+  margin-top: 30px;
+  }
