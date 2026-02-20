@@ -2,36 +2,51 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Temp Mail Pro</title>
-  <meta name="description" content="Free temporary email service. Receive emails instantly without signup.">
+  <title>TemporaryMail • Premium</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="app">
-  <h1>⚡ Temp Mail Pro</h1>
+<header class="top">
+  <div class="logo">📧 TemporaryMail</div>
+  <button class="premium">Go Premium</button>
+</header>
 
-  <div class="email-box">
-    <span id="email">Loading...</span>
-    <button onclick="newMail()">➕ New</button>
+<main class="container">
+
+  <h1>Your Temporary Email</h1>
+
+  <!-- EMAIL CARD -->
+  <div class="card email-card">
+    <span id="email">loading...</span>
+    <button onclick="copyMail()">Copy</button>
   </div>
 
-  <input id="search" placeholder="🔍 Search mail..." oninput="renderInbox()">
+  <!-- ACTIONS -->
+  <div class="actions">
+    <button onclick="newMail()">Change</button>
+    <button onclick="refreshInbox()">Refresh</button>
+    <button class="danger" onclick="clearInbox()">Delete</button>
+  </div>
 
-  <h2>📥 Inbox</h2>
-  <div id="inbox"></div>
+  <!-- AD PLACE (ADSENSE SAFE) -->
+  <div class="ad-box">Advertisement</div>
 
-  <div id="mailView" class="hidden">
-    <button onclick="closeMail()">⬅ Back</button>
-    <div id="attachments"></div>
+  <!-- INBOX -->
+  <section class="card inbox-card">
+    <h2>Inbox</h2>
+    <div id="inbox"></div>
+  </section>
+
+</main>
+
+<!-- MAIL MODAL -->
+<div id="modal" class="modal hidden">
+  <div class="modal-content">
+    <button class="close" onclick="closeMail()">✕</button>
     <pre id="mailContent"></pre>
   </div>
-
-  <footer>
-    <a href="privacy.html">Privacy Policy</a> |
-    <a href="terms.html">Terms</a> |
-    <a href="contact.html">Contact</a>
-  </footer>
 </div>
 
 <script src="app.js"></script>
